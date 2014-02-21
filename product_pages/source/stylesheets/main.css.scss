@@ -1,0 +1,15 @@
+@import 'vendor/normalize.css';
+@import 'vendor/bootstrap.css';
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/typography';
+@import 'partials/header';
+@import 'partials/intro';
+@import 'partials/ivy-use-case';
+@import 'partials/demo';
+@import 'partials/features-ivy';
+@import 'partials/how-filament-works';
+
+body {
+  background: #f1f1f1;
+}

@@ -1,0 +1,11 @@
+.demo {
+  height: 650px;
+  background: #fff;
+  overflow: hidden;
+  background: image_url('lines.png') repeat-x 0 0;
+
+  .demo-pane {
+    margin-top: 200px;
+    text-align: center;
+  }
+}

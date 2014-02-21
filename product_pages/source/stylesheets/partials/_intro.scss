@@ -1,0 +1,34 @@
+.intro {
+  background: $ivy;
+  overflow: hidden;
+  padding: 15px 0 70px;
+
+  img {
+    border: 2px solid rgba(0,0,0,0.1);
+  }
+  .intro-copy {
+
+    h1 {
+      font-size: 48px;
+      color: #fff;
+      font-weight: 300;
+      color: $dark-gray;
+      margin: 0;
+      line-height: 1em;
+    }
+    p {
+      color: #fff;
+      font-size: 26px;
+      line-height: 1.3em;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+    }
+    a.primary-cta {
+      @include primary-cta;
+    }
+    a.secondary-cta {
+      @include secondary-cta;
+      margin-left: 10px;
+    }
+
+  }
+}
