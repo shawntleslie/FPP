@@ -5,14 +5,51 @@
   padding: 40px 0 30px;
 
   p {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
+  }
+  p span {
+    color: #fff;
+  }
+  p strong {
+    font-weight: 700;
+    color: #fff;
   }
   ul {
-    margin: 0;
+    margin: 10px 0 0;
+    padding: 0;
     li {
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 26px;
+      list-style: none;
+      margin-bottom: 10px;
     }
   }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-small) {
+
+  .use-cases {
+    p {
+      font-size: 24px;
+    }
+    ul {
+      margin: 0;
+      li {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-medium) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-large) {
+
 }

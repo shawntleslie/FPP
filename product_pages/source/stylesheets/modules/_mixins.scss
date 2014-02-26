@@ -21,6 +21,7 @@
   padding: 7px 33px;
   border-radius: 3px;
   color: #fff;
+  text-decoration: none;
 }
 @mixin secondary-cta {
   background: transparent;
@@ -33,4 +34,15 @@
   border: 1px solid rgba(255,255,255,0.5);
   border-radius: 3px;
   color: #fff;
+  text-decoration: none;
+}
+
+
+//USAGE @include transition(all, 0.2s, ease-in-out);
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
 }

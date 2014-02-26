@@ -28,8 +28,8 @@
       <div class="intro">
         <div class="container">
           <div class="row">
-            <div class="col-md-3 col-md-offset-2">
-              <%= image_tag('ivy-tile.png') %>
+            <div class="col-md-3 col-md-offset-2 app-tile">
+              <%= image_tag 'ivy-tile.png' %>
             </div>
             <div class="intro-copy col-md-5">
               <h1 id="ivy">Ivy</h1>
@@ -51,7 +51,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p>You should use <span>Ivy</span> if you want <span>an unobtrusive sharing tool</span></p>
+              <p>You should use <span>Ivy</span> if you want <strong>an unobtrusive sharing tool</strong></p>
 
               <ul>
                 <li>social shares with more context</li>
@@ -66,43 +66,47 @@
       </div>
 
       <div class="container">
-        <div class="">
+        <div class="post-content">
+
           <h2>A dead simple and elegant way to share more effectively</h2>
-        </div>
-
-        <div class="row">
+          <hr />
+          <%= image_tag 'ivy-in-action.png', :class => 'alignright' %>
           <h4>Most sharing tools only let you share the page</h4>
-
           <p>Ivy lets your visitors select the parts of content that matter to them, by simply highlighting the text and sharing that directly. See the demo</p>
-        </div>
-        <div class="row">
+          <a href="#">See the demo</a>
+          <hr />
+          <%= image_tag 'ivy-backend.jpg', :class => 'alignleft' %>
           <h4>Encourage visitors what to share</h4>
-
           <p>As a content creator, Ivy enables you to easily curate which content is ripe for sharing. You can easily add bits of content in the app.</p>
 
           <ul>
             <li>Add sharable snippets as you compose your content</li>
             <li>Or select shareable snippets on existing content</li>
           </ul>
-        </div>
-        <div class="row">
-          <h4>A flexible design with easy customization</h4>
-
-          <p>Ivy stays out of the way with a design is that feels natural on top of any visual style. Plus, you can tailor most of this simple sharing experience with our intuitive dashboard.</p>
+          <hr />
+          <%= image_tag 'ivy-config.png', :class => 'aligncenter' %>
+          <h4 class="center-col">A flexible design with easy customization</h4>
+          <p class="center-col">Ivy stays out of the way with a design is that feels natural on top of any visual style. Plus, you can tailor most of this simple sharing experience with our intuitive dashboard.</p>
+          <hr />
         </div>
         <div class="by-filament">
           <h2>And it’s Filament, so installing is as easy as drag and drop.</h2>
-          <p><a href="#">Install now</a></p>
+          <a href="#" class="primary-cta">Install now</a>
         </div>
-
       </div>
 
       <div class="how-filament-works container-fluid">
         <div class="container">
-          <div class="row">
-            <h3>Filament is the app store for your website.</h3>
-            <p>Easily find and install awesome new tools and services for your website to make it perform better</p>
-            <p><a href="#">How Filament works</a></p>
+          <div class="row how-intro">
+            <div class="col-md-8 col-md-offset-2">
+              <h3>Filament is the app store for your website.</h3>
+              <p>Easily find and install awesome new tools and services for your website to make it perform better.</p>
+              <a href="#">How Filament works</a>
+            </div>
+
+            <div class="show-how-container col-md-12">
+              <p>Animation goes here.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -113,8 +117,6 @@
             <h2>Other Filament apps</h2>
             <p>And more on the way</p>
             <div class="app-list">
-              <h2>Other Filament apps</h2>
-              <p>And more on the way</p>
             </div>
           </div>
         </div>
