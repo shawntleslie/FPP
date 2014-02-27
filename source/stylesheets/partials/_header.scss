@@ -1,0 +1,47 @@
+header {
+  background-color: $ivy;
+  height: 78px;
+  overflow: hidden;
+
+  a.logo {
+    background: image_url('logo.png');
+    display: block;
+    height: 25px;
+    width: 110px;
+    text-indent: -9999px;
+    margin: 25px 0 0 50px;
+
+  }
+  .menu-button {
+    a {
+      font-family: "Open Sans";
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      display: inline-block;
+      padding: 1px 10px 0;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 3px;
+      position: absolute;
+      right: 50px;
+      top: 24px;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-small) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-medium) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-large) {
+
+}
