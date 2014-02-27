@@ -4,17 +4,12 @@
   padding: 15px 0 70px;
   text-align: center;
 
-  .app-tile {
-    text-align: center;
-    img {
-      border: 2px solid rgba(0,0,0,0.1);
-      margin: 0 auto;
-      width: 200px;
-      height: 200px;
-    }
+  img {
+    border: 2px solid rgba(0,0,0,0.1);
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
   }
-
-
   .intro-copy {
     margin-top: 30px;
 
@@ -41,14 +36,13 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-small) {
   .intro {
+    text-align: left;
 
-    .app-tile {
-      text-align: center;
-      img {
-        margin: 0;
-      }
+    img {
+      margin: 0;
     }
     .intro-copy {
+      margin-top: -7px;
       padding-left: 20px;
 
       h1 {
@@ -75,40 +69,6 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-medium) {
-
-  .intro {
-
-    .app-tile {
-      text-align: right;
-      img {
-        margin: 0;
-      }
-    }
-    .intro-copy {
-      margin-top: -7px;
-      padding-left: 20px;
-      text-align: left;
-
-      h1 {
-        font-size: 48px;
-        color: #fff;
-        font-weight: 300;
-        color: $dark-gray;
-        margin: 0;
-        line-height: 1em;
-      }
-      p {
-        color: #fff;
-        font-size: 26px;
-        line-height: 1.3em;
-        text-shadow: 0 1px 3px rgba(0,0,0,0.35);
-      }
-      .primary-cta, .secondary-cta {
-        text-align: left;
-        margin: 0 15px 0 0;
-      }
-    }
-  }
 
 }
 
