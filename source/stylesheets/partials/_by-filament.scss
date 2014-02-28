@@ -1,9 +1,13 @@
 .by-filament {
   text-align: center;
 
-  .primary-cta {
+  a.primary-cta {
     margin: 0 auto 30px;
     @extend .large-cta;
     background: $purple;
+
+    &:hover, &:active {
+      background: shade($purple, 15%);
+    }
   }
 }

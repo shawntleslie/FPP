@@ -30,16 +30,19 @@
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
-  padding: 7px 32px 6px;
-  border: 1px solid rgba(255,255,255,0.5);
+  padding: 6px 32px 6px;
+  border: 1px solid rgba(#fff,0.5);
   border-radius: 3px;
   color: #fff;
   text-decoration: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 //USAGE @include transition(all, 0.2s, ease-in-out);
-@mixin transition($transition-property, $transition-time, $method) {
+@mixin transition($transition-property, $transition-time, $method: ease-in-out) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
     -ms-transition: $transition-property $transition-time $method;

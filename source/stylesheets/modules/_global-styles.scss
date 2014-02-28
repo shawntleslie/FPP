@@ -1,12 +1,31 @@
 // Common button styles
-a.primary-cta {
+a.primary-cta, a.large-cta {
   @include primary-cta;
+
+  &:hover {
+    background: darken( $dark-gray, 20% );
+    @include transition(background, 0.2s, ease-in-out);
+  }
 }
 a.secondary-cta {
   @include secondary-cta;
   margin-left: 10px;
+  box-shadow: inset 0 0 1px 1px rgba($dark-gray, 0);
+  @include transition(box-shadow, .15s);
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba($dark-gray, 1);
+  }
 }
-.large-cta {
+a.large-cta {
   font-size: 18px;
   padding: 11px 60px;
+}
+a.secondary-cta.light {
+  box-shadow: inset 0 0 0 1px rgba(#fff, 0);
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba(#fff, 1);
+    border-color: #fff;
+  }
+
 }
