@@ -115,24 +115,35 @@
             <div class="col-md-8 col-md-offset-2">
               <h3>Filament is the app store for your website.</h3>
               <p>Easily find and install awesome new tools and services for your website to make it perform better.</p>
-              <a href="#">How Filament works</a>
             </div>
-
-            <div class="show-how-container col-md-12">
-              <p>Animation goes here.</p>
+          </div>
+          <div class="show-how-container">
+            <div class="row">
+              <div class="col-md-4 step">
+                <%= image_tag 'pick-app.png', :class => "pick-app" %>
+              </div>
+              <div class="col-md-4 step site">
+                <div>
+                  <form>
+                    <label>Enter your website</label>
+                    <input type="text" name="your-site" placeholder="buzzzword.io" />
+                  <button>Go</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-4 step">
+                <%= image_tag 'drag-n-drop.png' %>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="other-filament-apps container-fluid">
-        <div class="container">
-          <div class="row">
-            <h2>Other Filament apps</h2>
-            <p>And more on the way</p>
-            <div class="app-list">
-            </div>
-          </div>
+        <div class="row">
+          <h2>Other Filament apps</h2>
+          <p>And more on the way</p>
+          <%= partial "filament-apps" %>
         </div>
       </div>
 

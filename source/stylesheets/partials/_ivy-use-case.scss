@@ -18,6 +18,24 @@
   ul {
     margin: 10px 0 0;
     padding: 0;
+    position: relative;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      z-index: 1001;
+      display: block;
+      height: 32px;
+      width: 100%;
+      background: -moz-linear-gradient(top,  rgba(229,229,229,0) 0%, rgba(42,42,42,0.99) 76%, rgba(42,42,42,1) 77%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,229,229,0)), color-stop(76%,rgba(42,42,42,0.99)), color-stop(77%,rgba(42,42,42,1)));
+      background: -webkit-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(42,42,42,0.99) 76%,rgba(42,42,42,1) 77%);
+      background: -o-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(42,42,42,0.99) 76%,rgba(42,42,42,1) 77%);
+      background: -ms-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(42,42,42,0.99) 76%,rgba(42,42,42,1) 77%);
+      background: linear-gradient(to bottom,  rgba(229,229,229,0) 0%,rgba(42,42,42,0.99) 76%,rgba(42,42,42,1) 77%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#2a2a2a',GradientType=0 );
+    }
     li {
       font-size: 16px;
       line-height: 26px;
@@ -34,7 +52,7 @@
       font-size: 24px;
     }
     ul {
-      margin: 0;
+      margin: 10px 0 0;
       li {
         font-size: 18px;
         line-height: 30px;

@@ -1,8 +1,8 @@
 .how-filament-works {
   margin-top: 50px;
+  padding: 30px 0 70px;
   background: #363636;
   overflow: hidden;
-  height: 385px;
 
   h3 {
     color: #fff;
@@ -16,22 +16,23 @@
   }
   .how-intro {
     text-align: center;
+    margin: 0 0 20px;
+    overflow: hidden;
+
+    p {
+      margin: 7px 0 5px;
+    }
   }
 
   .show-how-container {
     height: 140px;
     width: 100%;
-    background: #444;
-    //remove when adding animation
-    display: table;
+    overflow: hidden;
 
     p {
       display: table-cell;
       vertical-align: middle;
       text-align: center;
-      //Remove above when animation
-      font-size: 12px;
-      text-transform: uppercase;
     }
   }
 }
@@ -49,7 +50,83 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-medium) {
+  .show-how-container {
 
+    .step {
+      text-align: center;
+      position: relative;
+      height: 133px;
+
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+
+        &:after {
+          content: none;
+        }
+      }
+
+      &:after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background: transparent image_url('line-segment.png') no-repeat 0 0;
+        height: 10px;
+        width: 62px;
+      }
+
+      img.pick-app {
+        margin-top: 16px;
+      }
+
+      &.site {
+        /*display: table;*/
+        /*height: 100%;*/
+
+        &:after {
+          right: -70px;
+        }
+
+        div {
+          /*display: table-cell;*/
+          /*vertical-align: middle;*/
+          /*height: 30px;*/
+          margin-top: 18px;
+
+          label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $body-text;
+          }
+          input[type="text"] {
+            outline: none;
+            border: 0;
+            background: #272727;
+            border-radius: 3px;
+            padding: 8px;
+            text-align: center;
+            color: #fff;
+            width: 270px;
+          }
+          button {
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 7px 10px;
+            background: $purple;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
