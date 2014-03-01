@@ -10,15 +10,15 @@
       text-align: center;
       width: 100%;
       margin: 0 auto;
+      padding: 0 5%;
 
       li {
         list-style-type: none;
         text-align: center;
-        float: left;
-        width: 180px;
-        height: 102px;
+        width: 145px;
+        height: 82px;
         display: inline-block;
-        margin: 14px;
+        margin: 5px;
 
         a {
           text-indent: -9999px;
@@ -48,6 +48,32 @@
 
         }
       }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-small) {
+
+  .other-filament-apps {
+
+
+    .app-list {
+
+      ul {
+
+
+        li {
+          width: 180px;
+          height: 102px;
+          margin: 10px;
+
+          a {
+
+          }
+
+          }
+        }
     }
   }
 }

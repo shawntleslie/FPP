@@ -9,11 +9,9 @@
     <title><%= current_page.data.title || "Filament" %></title>
 
     <%= stylesheet_link_tag "main" %>
-    <%= javascript_include_tag  "all", "bootstrap" %>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   </head>
     <body class="<%= page_classes %>">
-
       <header>
         <div class="container-fluid">
           <div class="row">
@@ -42,6 +40,8 @@
       </div>
 
       <div class="demo container-fluid">
+        <p class="instrux">Highlight anywhere on the article to see Ivy spring to life.
+</p>
         <div class="demo-pane">
           <div class="browser-top">
             <span></span>
@@ -50,7 +50,7 @@
             <h2>A title including a buzzword and a exaggerated adjective.</h2>
             <p>This is just and example article that is solely here to illustrate exactly how Ivy actually works. If you highlight any portion of the text, you’ll see a really nice example of how Ivy could work and create a better sharing experience on your site and any site you visit.</p>
             <h4>Pretty cool, right?</h4>
-            <p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum</p>
+            <p>We think so too! You can launch Ivy right now to any website totally free. Not to mention all the other apps you have access to through Filament. Just drag and drop and you're all set to start getting better shares with more context and a beautiful, simple sharing experience.</p>
 
           </div>
           <!-- <div class="fade"></div> -->
@@ -65,15 +65,12 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p>You should use <span>Ivy</span> if you want <strong>an unobtrusive sharing tool</strong></p>
+              <p>You should use <span>Ivy</span> if you want <strong id="add-character"></strong></p>
 
-              <ul>
-                <li>social shares with more context</li>
-                <li>to drive traffic to a particular part of the page</li>
-                <li>a more elegant way to share content</li>
-                <li>to encourage which content to share</li>
-                <li>social shares with more context</li>
+              <ul id="use-case-list">
+
               </ul>
+
             </div>
           </div>
         </div>
@@ -120,18 +117,20 @@
           <div class="show-how-container">
             <div class="row">
               <div class="col-md-4 step">
+                <p>Choose an app</p>
                 <%= image_tag 'pick-app.png', :class => "pick-app" %>
               </div>
               <div class="col-md-4 step site">
                 <div>
+                  <p>Enter your website</p>
                   <form>
-                    <label>Enter your website</label>
                     <input type="text" name="your-site" placeholder="buzzzword.io" />
                   <button>Go</button>
                   </form>
                 </div>
               </div>
               <div class="col-md-4 step">
+                <p>Drag-n-drop onto your site</p>
                 <%= image_tag 'drag-n-drop.png' %>
               </div>
             </div>
@@ -148,8 +147,8 @@
       </div>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+      <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-      <script src="js/main.js"></script>
+      <%= javascript_include_tag  "all", "bootstrap" %>
     </body>
 </html>

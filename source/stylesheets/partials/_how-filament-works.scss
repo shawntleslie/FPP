@@ -25,43 +25,23 @@
   }
 
   .show-how-container {
-    height: 140px;
+    // height: 140px;
     width: 100%;
     overflow: hidden;
 
     p {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
+      margin: 0;
+
     }
-  }
-}
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-small) {
-  .how-filament-works {
-    p {
-      font-size: 24px;
-      line-height: 40px;
-    }
-
-  }
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: $screen-medium) {
-  .show-how-container {
 
     .step {
       text-align: center;
       position: relative;
-      height: 133px;
+      // height: 165px;
+      margin-bottom: 100px;
 
-      &:first-child {
-        text-align: left;
-      }
       &:last-child {
-        text-align: right;
+        margin-bottom: 0;
 
         &:after {
           content: none;
@@ -71,37 +51,35 @@
       &:after {
         content: " ";
         position: absolute;
-        right: 0;
-        top: 50%;
+        bottom: -35%;
+        right: 50%;
+        margin-right: -26px;
         background: transparent image_url('line-segment.png') no-repeat 0 0;
         height: 10px;
         width: 62px;
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        z-index: 998;
+      }
+      label, p {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $body-text;
       }
 
-      img.pick-app {
-        margin-top: 16px;
+      img {
+        width: 100%;
+        max-width: 400px;
       }
 
       &.site {
-        /*display: table;*/
-        /*height: 100%;*/
-
-        &:after {
-          right: -70px;
-        }
+        height: 100px;
 
         div {
-          /*display: table-cell;*/
-          /*vertical-align: middle;*/
-          /*height: 30px;*/
           margin-top: 18px;
 
-          label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: $body-text;
-          }
           input[type="text"] {
             outline: none;
             border: 0;
@@ -110,7 +88,7 @@
             padding: 8px;
             text-align: center;
             color: #fff;
-            width: 270px;
+            width: 230px;
           }
           button {
             font-weight: 600;
@@ -129,7 +107,149 @@
   }
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-small) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-medium) {
+  .how-filament-works {
+    .show-how-container {
+
+      .step {
+        height: 165px;
+        margin-bottom: 0;
+
+        &:first-child {
+
+          img {
+            max-width: 287px;
+          }
+        }
+        &:last-child {
+
+          img {
+            max-width: 200px;
+
+          }
+
+          &:after {
+
+          }
+        }
+
+        &:after {
+          right: 0;
+          bottom: 50%;
+          margin: 0;
+          -moz-transform: none;
+          -webkit-transform: none;
+          transform: none;
+        }
+
+        img.pick-app {
+
+        }
+        img {
+
+        }
+
+        &.site {
+          height: 165px;
+
+          &:after {
+            right: -16%;
+          }
+
+          div {
+            margin-top: 0;
+
+            form {
+              margin-top: 24px;
+
+
+              label {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-large) {
+
+  .how-filament-works {
+
+    .show-how-container {
+
+      .step {
+
+
+        &:first-child {
+
+          img {
+
+          }
+          &:after {
+            right: -5%;
+          }
+        }
+        &:last-child {
+
+          img {
+
+
+          }
+
+          &:after {
+
+          }
+        }
+
+        &:after {
+          right: 0;
+          bottom: 50%;
+          margin: 0;
+          -moz-transform: none;
+          -webkit-transform: none;
+          transform: none;
+        }
+
+        img.pick-app {
+
+        }
+        img {
+
+        }
+
+        &.site {
+          height: 165px;
+
+          &:after {
+            right: -10%;
+          }
+
+          div {
+            margin-top: 0;
+
+            form {
+              margin-top: 24px;
+
+
+              label {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
 }
