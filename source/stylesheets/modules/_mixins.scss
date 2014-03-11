@@ -11,6 +11,12 @@
     *zoom: 1;
 }
 
+.shown {
+  opacity: 1.0 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
 @mixin primary-cta {
   background: $dark-gray;
   display: inline-block;

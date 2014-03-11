@@ -61,6 +61,21 @@
 
   });
 
+  // Toggle Apps content
+  $('.toggle a').click(function(e){
+    e.preventDefault();
+
+    if ($('.related-apps').hasClass('shown')){
+      $('.related-apps').removeClass('shown');
+      $('.all-apps').addClass('shown');
+    }
+    else if ($('.all-apps').hasClass('shown')){
+      $('.all-apps').removeClass('shown');
+      $('.related-apps').addClass('shown');
+    }
+
+  });
+
 })(window, jQuery, null)
 
 // Smoothscroll to id on same page

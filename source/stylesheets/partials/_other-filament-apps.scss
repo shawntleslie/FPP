@@ -3,7 +3,26 @@
   text-align: center;
   padding: 30px 0 50px;
 
-  .app-list {
+  .toggle {
+
+    ul {
+
+      li {
+        display: inline-block;
+
+        a {
+
+        }
+      }
+    }
+  }
+
+  .related-apps, .all-apps {
+    display: none;
+    // opacity: 0;
+
+  }
+  .full-app-list, .related-app-list {
 
     ul {
       overflow: hidden;
@@ -15,37 +34,72 @@
       li {
         list-style-type: none;
         text-align: center;
-        width: 145px;
-        height: 82px;
+        width: 150px;
+        height: 445px;
         display: inline-block;
         margin: 5px;
 
+        .app-tile {
+          height: 82px;
+
+          a {
+            text-indent: -9999px;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+
+            &.chartbeat { background: image_url('chartbeat.jpg'); background-size: cover; }
+            &.crazyegg { background: image_url("crazyegg.jpg"); background-size: cover; }
+            &.customer { background: image_url("customer.jpg"); background-size: cover; }
+            &.codedrop { background: image_url("codedrop.jpg"); background-size: cover; }
+            &.flare { background: image_url("flare.jpg"); background-size: cover; }
+            &.flipjack { background: image_url("flipjack.jpg"); background-size: cover; }
+            &.highlite { background: image_url("highlite.jpg"); background-size: cover; }
+            &.origami { background: image_url("origami.jpg"); background-size: cover; }
+            &.passport { background: image_url("passport.jpg"); background-size: cover; }
+            &.sidecar { background: image_url("sidecar.jpg"); background-size: cover; }
+            &.slidedeck { background: image_url("slidedeck.jpg"); background-size: cover; }
+            &.google-analytics { background: image_url("google-analytics.jpg"); background-size: cover; }
+            &.ivy { background: image_url("ivy.jpg"); background-size: cover; }
+            &.mailchimp { background: image_url("mailchimp.jpg"); background-size: cover; }
+            &.mixpanel { background: image_url("mixpanel.jpg"); background-size: cover; }
+            &.olark { background: image_url("olark.jpg"); background-size: cover; }
+            &.optimizely { background: image_url("optimizely.jpg"); background-size: cover; }
+            &.qualaroo { background: image_url("qualaroo.jpg"); background-size: cover; }
+          }
+        }
+      }
+      .app-description {
+        margin-top: 8px;
+        height: 32px;
+        width: 100%;
+        overflow: hidden;
+
+        h3 {
+          color: $body-text;
+          margin: 0;
+          float: left;
+          text-transform: none;
+        }
         a {
-          text-indent: -9999px;
-          width: 100%;
-          height: 100%;
-          display: inline-block;
+          color: #939393;
+          margin: 2px 0 0;
+          float: right;
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 1px 5px;
+          border-radius: 3px;
+          display: block;
+          border: 1px solid rgba(255,255,255,0.3);
+          @include transition(color, 0.2s, ease-in-out);
+          @include transition(border-color, 0.2s, ease-in-out);
 
-          &.chartbeat { background: image_url('chartbeat.jpg'); background-size: cover; }
-          &.crazyegg { background: image_url("crazyegg.jpg"); background-size: cover; }
-          &.customer { background: image_url("customer.jpg"); background-size: cover; }
-          &.codedrop { background: image_url("codedrop.jpg"); background-size: cover; }
-          &.flare { background: image_url("flare.jpg"); background-size: cover; }
-          &.flipjack { background: image_url("flipjack.jpg"); background-size: cover; }
-          &.highlite { background: image_url("highlite.jpg"); background-size: cover; }
-          &.origami { background: image_url("origami.jpg"); background-size: cover; }
-          &.passport { background: image_url("passport.jpg"); background-size: cover; }
-          &.sidecar { background: image_url("sidecar.jpg"); background-size: cover; }
-          &.slidedeck { background: image_url("slidedeck.jpg"); background-size: cover; }
-          &.google-analytics { background: image_url("google-analytics.jpg"); background-size: cover; }
-          &.ivy { background: image_url("ivy.jpg"); background-size: cover; }
-          &.mailchimp { background: image_url("mailchimp.jpg"); background-size: cover; }
-          &.mixpanel { background: image_url("mixpanel.jpg"); background-size: cover; }
-          &.olark { background: image_url("olark.jpg"); background-size: cover; }
-          &.optimizely { background: image_url("optimizely.jpg"); background-size: cover; }
-          &.qualaroo { background: image_url("qualaroo.jpg"); background-size: cover; }
-
-
+          &:hover {
+            text-decoration: none;
+            color: #fff;
+            border-color: #fff;
+          }
         }
       }
     }
@@ -58,22 +112,36 @@
   .other-filament-apps {
 
 
-    .app-list {
+    .full-app-list, .related-app-list {
 
       ul {
 
 
         li {
-          width: 180px;
-          height: 102px;
+          width: 250px;
+          height: 142px;
           margin: 10px;
 
+          .app-tile {
+            height: 142px;
+
+            a {
+
+            }
+          }
+        }
+        .app-description {
+
+
+          h3 {
+
+          }
           a {
 
           }
-
-          }
         }
+      }
     }
   }
 }
+

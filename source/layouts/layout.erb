@@ -56,7 +56,7 @@
         </div>
         <div class="demo-cta">
           <a class="primary-cta" href="#">Install Ivy for Free</a>
-          <a class="secondary-cta" href="#">Close Demo</a>
+          <!-- <a class="secondary-cta" href="#">Close Demo</a> -->
         </div>
       </div>
 
@@ -80,7 +80,7 @@
 
           <h2>A dead simple and elegant way to share more effectively</h2>
           <hr />
-          <%= image_tag 'ivy-in-action.png', :class => 'alignright' %>
+          <%= image_tag 'ivy-in-use.gif', :class => 'alignright' %>
           <h4>Most sharing tools only let you share the page</h4>
           <p>Ivy lets your visitors select the parts of content that matter to them, by simply highlighting the text and sharing that directly. See the demo</p>
           <a href="#view-demo">See the demo</a>
@@ -137,13 +137,29 @@
         </div>
       </div>
 
+      <% if content_for?(:related) %>
       <div class="other-filament-apps container-fluid">
         <div class="row">
-          <h2>Other Filament apps</h2>
-          <p>And more on the way</p>
-          <%= partial "filament-apps" %>
+          <div class="toggle">
+            <ul>
+              <li><a href="#" id="show-related-apps">Related Apps</a></li> |
+              <li><a href="#">Toggle Goes here</a></li> |
+              <li><a href="#" id="show-all-apps">View all Apps</a></li>
+            </ul>
+          </div>
+
+          <div class="related-apps shown">
+            <h2><%= current_page.data.app_headline %></h2>
+            <%= yield_content :related %>
+          </div>
+
+          <div class="all-apps">
+            <%= partial "filament-apps"  %>
+          </div>
+
         </div>
       </div>
+      <% end %>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.1.min.js"><\/script>')</script>

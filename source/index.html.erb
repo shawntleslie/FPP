@@ -1,4 +1,45 @@
 ---
 title: Ivy - Share the content that's most important to you - by Filament
+app_headline: Ivy works awesomely with these apps too
+app_sub_headline: And more on the way
+
 ---
+
+<% content_for :related do %>
+
+  <div class="related-app-list">
+    <ul>
+      <li>
+        <div class="barf">
+          <div class="app-tile">
+            <a class="flare" href="#">flare</a>
+          </div>
+          <div class="app-description">
+            <h3>App Name</h3>
+            <a href="#" class="install">Install</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="app-tile">
+          <a class="flipjack" href="#">flipjack</a>
+        </div>
+        <div class="app-description">
+          <h3>App Name</h3>
+          <a href="#" class="install">Install</a>
+        </div>
+      </li>
+      <li>
+        <div class="app-tile">
+          <a class="passport" href="#">passport</a>
+        </div>
+        <div class="app-description">
+          <h3>App Name</h3>
+          <a href="#" class="install">Install</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<% end %>
 
