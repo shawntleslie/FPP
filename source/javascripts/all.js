@@ -9,11 +9,9 @@
       "social shares with more context",
       "to drive traffic to a particular part of the page",
       "a more elegant way to share content",
-      "to encourage which content to share",
-      "social shares with more context",
-      "to drive traffic to a particular part of the page",
-      "a more elegant way to share content",
-      "to encourage which content to share"
+      "to encourage which content your visitors should share",
+      "a quick and easy way to add better sharing to your site",
+      "to drive traffic to a particular part of the page"
     ]
 
     var i = 0; // Sentence
@@ -59,26 +57,33 @@
 
     useCaseBot();
 
+    function setHeightOtherApps() {
+      if ($('.related-apps').hasClass('shown')){
+        $('.related-apps').removeClass('shown');
+        $('.all-apps').addClass('shown');
+        $('.other-filament-apps').attr("data-show", "all");
+        var height = $('.all-apps').get(0).scrollHeight;
+      }
+      else if ($('.all-apps').hasClass('shown')){
+        $('.all-apps').removeClass('shown');
+        $('.related-apps').addClass('shown');
+        $('.other-filament-apps').attr("data-show", "related");
+        var height = $('.related-apps').get(0).scrollHeight;
+      }
+      $('.other-filament-apps').height(height);
+    }
+    setHeightOtherApps();
+
+    // Toggle Apps content
+    $('.apps-toggle a, .apps-toggle span.apps-toggle-bezel').click(function(e){
+      e.preventDefault();
+
+      setHeightOtherApps();
+
+    });
   });
 
-  // Toggle Apps content
-  $('.apps-toggle a').click(function(e){
-    e.preventDefault();
 
-    if ($('.related-apps').hasClass('shown')){
-      $('.related-apps').removeClass('shown');
-      $('.all-apps').addClass('shown');
-      $('.other-filament-apps').attr("data-show", "all");
-      var height = $('.all-apps').get(0).scrollHeight;
-    }
-    else if ($('.all-apps').hasClass('shown')){
-      $('.all-apps').removeClass('shown');
-      $('.related-apps').addClass('shown');
-      $('.other-filament-apps').attr("data-show", "related");
-      var height = $('.related-apps').get(0).scrollHeight;
-    }
-    $('.other-filament-apps').height(height);
-  });
 
 
 })(window, jQuery, null)
