@@ -62,19 +62,24 @@
   });
 
   // Toggle Apps content
-  $('.toggle a').click(function(e){
+  $('.apps-toggle a').click(function(e){
     e.preventDefault();
 
     if ($('.related-apps').hasClass('shown')){
       $('.related-apps').removeClass('shown');
       $('.all-apps').addClass('shown');
+      $('.other-filament-apps').attr("data-show", "all");
+      var height = $('.all-apps').get(0).scrollHeight;
     }
     else if ($('.all-apps').hasClass('shown')){
       $('.all-apps').removeClass('shown');
       $('.related-apps').addClass('shown');
+      $('.other-filament-apps').attr("data-show", "related");
+      var height = $('.related-apps').get(0).scrollHeight;
     }
-
+    $('.other-filament-apps').height(height);
   });
+
 
 })(window, jQuery, null)
 

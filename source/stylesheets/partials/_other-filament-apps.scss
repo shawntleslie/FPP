@@ -1,26 +1,65 @@
 .other-filament-apps {
   background: #2a2a2a;
   text-align: center;
-  padding: 30px 0 50px;
+  padding: 30px 0 120px;
 
-  .toggle {
+  &[data-show="related"] .apps-toggle a#show-related-apps, &[data-show="all"] .apps-toggle a#show-all-apps {
+    color: #fff;
+  }
 
-    ul {
+  .apps-toggle {
 
-      li {
+    a {
+      display: inline-block;
+      position: relative;
+      top: -12px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      color: #c8c8c8;
+      text-decoration: none;
+    }
+    span.apps-toggle-bezel {
+      text-align: left;
+      display: inline-block;
+      background: #d1d1d1;
+      border-radius: 6px;
+      width: 89px;
+      height: 40px;
+      position: relative;
+      padding: 6px 4px;
+      box-shadow: inset 0 3px #0a0a0a;
+      margin: 0 15px;
+      @include transition(left,0.25s);
+
+      span.toggle {
+        position: absolute;
+        left: 50%;
+        display: block;
+        background: $purple;
+        border-radius: 4px;
+        width: 40px;
+        height: 31px;
         display: inline-block;
-
-        a {
-
-        }
+        box-shadow: inset 0 -3px rgba(0,0,0,0.25);
+        -webkit-transform:translateX(-50%);
+        margin-left: -20px;
+        -webkit-transition:-webkit-transform 0.3s ease-in-out;
       }
     }
   }
+  &[data-show="all"] .apps-toggle span.apps-toggle-bezel span.toggle {
+    -webkit-transform:translateX(50%);
+  }
 
   .related-apps, .all-apps {
-    display: none;
-    // opacity: 0;
-
+    position: absolute;
+    // overflow: hidden;
+    // height: 500px;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    @include transition(opacity, .3s);
   }
   .full-app-list, .related-app-list {
 
@@ -35,56 +74,57 @@
         list-style-type: none;
         text-align: center;
         width: 150px;
-        height: 445px;
+        // height: 445px;
         display: inline-block;
-        margin: 5px;
+        margin: 12px 5px;
 
-        .app-tile {
-          height: 82px;
+        .app-list-item {
+          .app-image {
+            height: 82px;
 
-          a {
-            text-indent: -9999px;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
+            a {
+              text-indent: -9999px;
+              width: 100%;
+              height: 100%;
+              display: inline-block;
 
-            &.chartbeat { background: image_url('chartbeat.jpg'); background-size: cover; }
-            &.crazyegg { background: image_url("crazyegg.jpg"); background-size: cover; }
-            &.customer { background: image_url("customer.jpg"); background-size: cover; }
-            &.codedrop { background: image_url("codedrop.jpg"); background-size: cover; }
-            &.flare { background: image_url("flare.jpg"); background-size: cover; }
-            &.flipjack { background: image_url("flipjack.jpg"); background-size: cover; }
-            &.highlite { background: image_url("highlite.jpg"); background-size: cover; }
-            &.origami { background: image_url("origami.jpg"); background-size: cover; }
-            &.passport { background: image_url("passport.jpg"); background-size: cover; }
-            &.sidecar { background: image_url("sidecar.jpg"); background-size: cover; }
-            &.slidedeck { background: image_url("slidedeck.jpg"); background-size: cover; }
-            &.google-analytics { background: image_url("google-analytics.jpg"); background-size: cover; }
-            &.ivy { background: image_url("ivy.jpg"); background-size: cover; }
-            &.mailchimp { background: image_url("mailchimp.jpg"); background-size: cover; }
-            &.mixpanel { background: image_url("mixpanel.jpg"); background-size: cover; }
-            &.olark { background: image_url("olark.jpg"); background-size: cover; }
-            &.optimizely { background: image_url("optimizely.jpg"); background-size: cover; }
-            &.qualaroo { background: image_url("qualaroo.jpg"); background-size: cover; }
+              &.chartbeat { background: image_url('chartbeat.jpg'); background-size: cover; }
+              &.crazyegg { background: image_url("crazyegg.jpg"); background-size: cover; }
+              &.customer { background: image_url("customer.jpg"); background-size: cover; }
+              &.codedrop { background: image_url("codedrop.jpg"); background-size: cover; }
+              &.flare { background: image_url("flare.jpg"); background-size: cover; }
+              &.flipjack { background: image_url("flipjack.jpg"); background-size: cover; }
+              &.highlite { background: image_url("highlite.jpg"); background-size: cover; }
+              &.origami { background: image_url("origami.jpg"); background-size: cover; }
+              &.passport { background: image_url("passport.jpg"); background-size: cover; }
+              &.sidecar { background: image_url("sidecar.jpg"); background-size: cover; }
+              &.slidedeck { background: image_url("slidedeck.jpg"); background-size: cover; }
+              &.google-analytics { background: image_url("google-analytics.jpg"); background-size: cover; }
+              &.ivy { background: image_url("ivy.jpg"); background-size: cover; }
+              &.mailchimp { background: image_url("mailchimp.jpg"); background-size: cover; }
+              &.mixpanel { background: image_url("mixpanel.jpg"); background-size: cover; }
+              &.olark { background: image_url("olark.jpg"); background-size: cover; }
+              &.optimizely { background: image_url("optimizely.jpg"); background-size: cover; }
+              &.qualaroo { background: image_url("qualaroo.jpg"); background-size: cover; }
+            }
           }
         }
       }
       .app-description {
-        margin-top: 8px;
-        height: 32px;
+        margin-top: 3px;
+        height: 52px;
         width: 100%;
         overflow: hidden;
 
         h3 {
           color: $body-text;
           margin: 0;
-          float: left;
           text-transform: none;
+          font-size: 13px;
         }
         a {
           color: #939393;
           margin: 2px 0 0;
-          float: right;
           font-size: 12px;
           font-weight: 700;
           text-transform: uppercase;
@@ -110,7 +150,7 @@
 @media (min-width: $screen-small) {
 
   .other-filament-apps {
-
+    height: 450px;
 
     .full-app-list, .related-app-list {
 
@@ -119,25 +159,29 @@
 
         li {
           width: 250px;
-          height: 142px;
+          // height: 142px;
           margin: 10px;
 
-          .app-tile {
-            height: 142px;
+          .app-list-item {
+            .app-image {
+              height: 142px;
 
-            a {
+              a {
 
+              }
             }
           }
         }
         .app-description {
-
+          margin-top: 8px;
 
           h3 {
-
+            font-size: 15px;
+            float: left;
           }
           a {
-
+            float: right;
+            padding: 0 8px;
           }
         }
       }

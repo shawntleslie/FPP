@@ -138,14 +138,19 @@
       </div>
 
       <% if content_for?(:related) %>
-      <div class="other-filament-apps container-fluid">
+      <div class="other-filament-apps container-fluid" data-show="related">
         <div class="row">
-          <div class="toggle">
-            <ul>
-              <li><a href="#" id="show-related-apps">Related Apps</a></li> |
-              <li><a href="#">Toggle Goes here</a></li> |
-              <li><a href="#" id="show-all-apps">View all Apps</a></li>
-            </ul>
+          <div class="apps-toggle">
+
+            <a href="#" id="show-related-apps">Related Apps</a>
+
+            <span class="apps-toggle-bezel">
+              <span class="toggle">&nbsp;</span>
+              <!-- <a href="#" class="toggle-slider">Toggle Goes here</a> -->
+            </span>
+
+            <a href="#" id="show-all-apps">View all Apps</a>
+
           </div>
 
           <div class="related-apps shown">
